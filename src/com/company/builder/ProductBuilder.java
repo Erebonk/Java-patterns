@@ -2,7 +2,7 @@ package com.company.builder;
 
 import java.math.BigDecimal;
 
-public class Product {
+public class ProductBuilder {
 
     private final long id;
 
@@ -37,13 +37,13 @@ public class Product {
             return this;
         }
 
-        public Product build() {
-            return new Product(this);
+        public ProductBuilder build() {
+            return new ProductBuilder(this);
         }
 
     }
 
-    private Product(Builder builder) {
+    private ProductBuilder(Builder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.fullName = builder.fullName;
