@@ -11,7 +11,7 @@ public abstract class Pizza {
     final Set<Topping> toppings;
 
     Pizza(Builder<?> builder) {
-        toppings = builder.toppings.clone();
+        toppings = builder.topping.clone();
     }
 
     abstract static class Builder<T extends Builder<T>> {
